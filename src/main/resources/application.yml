@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  messages:
+    basename: validation
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:inMemoryDB;DB_CLOSE_DELAY=-1     
+    username: manoj
+    password:
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.online: DEBUG
